@@ -1,0 +1,12 @@
+[run]
+branch = True
+omit =
+        *test*
+        env/*,
+        army_game/settings.py
+
+[report]
+omit =
+        *test*
+        env/*,
+        army_game/settings.py
