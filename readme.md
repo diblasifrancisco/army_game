@@ -11,9 +11,9 @@ One army can attack another, the one that have more points wins.
 ### Using docker(recommended)
 
 1. On the root project: `docker build . -t army_game`
-4. To run the app, `docker run army_game python game.py`
-5. To run the tests, `docker run army_game pytest`
-6. To run the coverage report, `docker run army_game coverage report`
+2. To run the app, `docker run army_game python game.py`
+3. To run the tests, `docker run army_game pytest`
+4. To run the coverage report, `docker run army_game coverage report`
 
 ### Using a virtual enviroment
 
@@ -21,10 +21,10 @@ One army can attack another, the one that have more points wins.
 2. pip install virtualenv
 3. python3 -m venv env
 4. source env/bin/activate
-3. On the root project: `pip install -r requirements.txt`
-4. To run the app: `python game.py`
-5. To run the tests: `pytest`
-6. To run the coverage report: `coverage report`
+5. On the root project: `pip install -r requirements.txt`
+6. To run the app: `python game.py`
+7. To run the tests: `pytest`
+8. To run the coverage report: `coverage report`
 
 ### Runing the project locally
 
