@@ -6,6 +6,11 @@ from army_game.constants import (
 )
 from army_game.mixins.coin_transaction import CoinTransactionMixin
 
+from army_game.exceptions import (
+    BranchUpgradeNotAvailable,
+    NotEnoughCoins,
+)
+
 
 class TransformationBackend(CoinTransactionMixin):
 
@@ -19,27 +24,26 @@ class TransformationBackend(CoinTransactionMixin):
         current_number_level = BRANCH_TO_LEVEL[army_branch.branch_type]
         next_branch = LEVEL_TO_BRANCH.get(current_number_level + 1)
         if not next_branch:
-            raise Exception("This branch has reached the maximum level.")
+            raise BranchUpgradeNotAvailable(
+                "This branch has reached the maximum level.",
+            )
         next_level_cost = TRASFORMATION_BRANCH_COST[
-            LEVEL_TO_BRANCH[next_branch]
+            next_branch
         ]
 
         if army_branch.army.coins < next_level_cost:
-            raise Exception("This army {} has not enought founds.".format(
-                army_branch.army.name,
-                ),
-            )
+            raise NotEnoughCoins("Army has not enought founds.")
 
-        army_branch.brach_type = next_branch
+        army_branch.branch_type = next_branch
         transformation = Transformation(
-            army=army_branch.army,
-            cost_coins=next_level_cost,
-            old_branch=army_branch.branch_type,
-            new_branch=next_branch,
+            amount=next_level_cost,
+            army_branch=army_branch,
+            old_branch_type=LEVEL_TO_BRANCH[current_number_level],
+            new_branch_type=next_branch,
         )
 
-        TransformationBackend.process_coin_transaction(
+        coin_transaction = TransformationBackend.process_coin_transaction(
             transformation,
         )
 
-        return transformation
+        return transformation, army_branch, coin_transaction

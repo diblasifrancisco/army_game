@@ -5,5 +5,6 @@ class Army():
         self.coins = 1000
         self.civilization = civilization
 
+    @property
     def points(self):
         return sum(branch.points for branch in self.army_branches)

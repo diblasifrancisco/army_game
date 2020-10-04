@@ -1,5 +1,10 @@
+# Army game
+
 ## Summary
 
+Army game: this game is about civilizations that can have multiple armies, at the same time these armies can have branches, that can
+be trained and transformed into another branch in order to have more points.
+One army can attack another, the one that have more points wins.
 
 ## Steps
 

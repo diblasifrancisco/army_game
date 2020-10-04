@@ -42,8 +42,8 @@ TRAINING_FORCE_POINTS_COST = {
 }
 
 TRASFORMATION_BRANCH_COST = {
-    2: 30,
-    3: 40,
+    'Pikeman': 30,
+    'Chivalry': 40,
 }
 
 TOTAL_COINS_FOR_BATTLE_WON = 100

@@ -1,7 +1,7 @@
 from army_game.backend.army_branch import ArmyBranchBackend
 
 
-class TestArmyBranch:
+class TestArmyBranchBackend:
 
     def _get_unit_from_branch(self, army_branches, branch_type):
         return [branch for branch in army_branches if branch.branch_type == branch_type]
