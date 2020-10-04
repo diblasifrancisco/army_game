@@ -18,4 +18,5 @@ class Battle(Transaction):
         self.attacked_army = attacked_army
         self.winner_army = winner_army
         self.is_a_tie = is_a_tie
+        self.army = winner_army
         self.created = datetime.now()

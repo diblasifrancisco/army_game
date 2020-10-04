@@ -8,13 +8,11 @@ from army_game.models import (
 class Game(object):
 
     def play(self):
-
         # initial data
         english_civilization = Civilization(name='English')
         english_army = Army(
             civilization=english_civilization,
         )
-        army_branck_backend = ArmyBranchBackend
         english_army.army_branches = ArmyBranchBackend.create_branches_for_army(
             army=english_army,
         )
@@ -23,7 +21,7 @@ class Game(object):
         chinese_army = Army(
             civilization=chinese_civilization,
         )
-        chinese_army.army_branches = army_branck_backend.create_branches_for_army(
+        chinese_army.army_branches = ArmyBranchBackend.create_branches_for_army(
             army=chinese_army,
         )
 
@@ -31,7 +29,7 @@ class Game(object):
         byzantine_army = Army(
             civilization=byzantine_civilization,
         )
-        byzantine_army.army_branches = army_branck_backend.create_branches_for_army(
+        byzantine_army.army_branches = ArmyBranchBackend.create_branches_for_army(
             army=byzantine_army,
         )
 

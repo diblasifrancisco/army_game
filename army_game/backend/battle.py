@@ -27,8 +27,12 @@ class BattleBackend(CoinTransactionMixin):
 
     @classmethod
     def fight(cls, attacking_army, attacked_army):
-        # TODO document this
+        """
+        The winner army earns 100 coins
+        The looser army lost 2 army branches with the maximum points
+        If it's a tie, both armies lost a branch tha has most of the points.
 
+        """
         winner = None
         is_a_tie = False
         amount = 100
@@ -51,7 +55,6 @@ class BattleBackend(CoinTransactionMixin):
                 attacking_army,
                 attacked_army,
             )
-
         else:
             BattleBackend._process_looser(
                 looser,
@@ -63,6 +66,7 @@ class BattleBackend(CoinTransactionMixin):
             winner_army=winner,
             is_a_tie=is_a_tie,
             amount=amount,
+            army=winner,
         )
 
         if amount > 0:

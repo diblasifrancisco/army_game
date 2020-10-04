@@ -9,7 +9,6 @@ class ArmyBranchBackend():
 
     @classmethod
     def create_branches_for_army(cls, army):
-        # TODO handle civilization not found in dict
         army_branches = []
         civilization_name = army.civilization.name
         quantity_per_branch = CIVILIZATIONS[civilization_name]

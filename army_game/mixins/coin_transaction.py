@@ -23,7 +23,7 @@ class CoinTransactionMixin():
         else:
             raise Exception("This operation is not supported.")
 
-        CoinTransaction(
+        return CoinTransaction(
             transaction_type=transaction.transaction_type,
             army=transaction.army,
             amount=transaction.amount,
