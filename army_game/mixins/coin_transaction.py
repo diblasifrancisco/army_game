@@ -11,7 +11,10 @@ DECREASE_BALANCE_TRANSACTIONS = [
 
 
 class CoinTransactionMixin():
+    """
+    Mixin for all the events or transactions that have an impact on the coin balance
 
+    """
     @classmethod
     def process_coin_transaction(cls, transaction):
         if transaction.transaction_type in INCREASE_BALANCE_TRANSACTIONS:

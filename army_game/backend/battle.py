@@ -11,7 +11,7 @@ class BattleBackend(CoinTransactionMixin):
             key=lambda x: x.points,
             reverse=True,
         )[:1].remove()
-        attacking_army.attacked_army.sort(
+        attacked_army.army_branches.sort(
             key=lambda x: x.points,
             reverse=True,
         )[:1].remove()
@@ -38,11 +38,11 @@ class BattleBackend(CoinTransactionMixin):
         amount = 100
         looser = None
 
-        if attacking_army > attacked_army:
+        if attacking_army.points > attacked_army.points:
             winner = attacking_army
             looser = attacked_army
 
-        elif attacking_army < attacked_army:
+        elif attacking_army.points < attacked_army.points:
             winner = attacked_army
             looser = attacking_army
 

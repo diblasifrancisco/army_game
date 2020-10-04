@@ -3,8 +3,12 @@ from army_game.models.training import Training
 from army_game.mixins.coin_transaction import CoinTransactionMixin
 
 
-class TransformationBackend(CoinTransactionMixin):
+class TrainingBackend(CoinTransactionMixin):
+    """
+    It tries to train the branch if possible
+    It returns the training created.
 
+    """
     @classmethod
     def train_branch(cls, army_branch):
         training_cost_points = TRAINING_FORCE_POINTS_COST[
@@ -17,7 +21,7 @@ class TransformationBackend(CoinTransactionMixin):
                 ),
             )
 
-        army_branch.points = training_cost_points['points']
+        army_branch.points += training_cost_points['points']
 
         training = Training(
             army=army_branch.army,
@@ -25,7 +29,7 @@ class TransformationBackend(CoinTransactionMixin):
             force_points=training_cost_points['points'],
         )
 
-        TransformationBackend.process_coin_transaction(
+        TrainingBackend.process_coin_transaction(
             training,
         )
 

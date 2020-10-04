@@ -1,30 +1,30 @@
 
 CIVILIZATIONS = {
     'Chinese': {
-        'Arquer': 2,
+        'Archer': 2,
         'Pikeman': 25,
         'Chivalry': 2,
     },
     'English': {
-        'Arquer': 10,
+        'Archer': 10,
         'Pikeman': 10,
         'Chivalry': 10,
     },
     'Byzantine': {
-        'Arquer': 5,
+        'Archer': 5,
         'Pikeman': 8,
         'Chivalry': 15,
     }
 }
 
 BRANCH_POINTS = {
-    'Arquer': 5,
+    'Archer': 5,
     'Pikeman': 10,
     'Chivalry': 20,
 }
 
 BRANCH_TO_LEVEL = {
-    'Arquer': 1,
+    'Archer': 1,
     'Pikeman': 2,
     'Chivalry': 3,
 }
@@ -36,7 +36,7 @@ LEVEL_TO_BRANCH = {
 }
 
 TRAINING_FORCE_POINTS_COST = {
-    'Arquer': {'points': 3, 'cost': 10},
+    'Archer': {'points': 3, 'cost': 10},
     'Pikeman': {'points': 7, 'cost': 20},
     'Chivalry': {'points': 10, 'cost': 30},
 }
