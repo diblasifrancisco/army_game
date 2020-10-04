@@ -2,11 +2,11 @@
 branch = True
 omit =
         *test*
-        env/*,
+        env/*
         army_game/settings.py
 
 [report]
 omit =
         *test*
-        env/*,
+        env/*
         army_game/settings.py

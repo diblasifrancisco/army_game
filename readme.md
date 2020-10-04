@@ -15,6 +15,17 @@ One army can attack another, the one that have more points wins.
 5. To run the tests, `docker run army_game pytest`
 6. To run the coverage report, `docker run army_game coverage report`
 
+### Using a virtual enviroment
+
+1. Install pip https://pip.pypa.io/en/stable/installing/
+2. pip install virtualenv
+3. python3 -m venv env
+4. source env/bin/activate
+3. On the root project: `pip install -r requirements.txt`
+4. To run the app: `python game.py`
+5. To run the tests: `pytest`
+6. To run the coverage report: `coverage report`
+
 ### Runing the project locally
 
 1. Install pip https://pip.pypa.io/en/stable/installing/
@@ -23,5 +34,6 @@ One army can attack another, the one that have more points wins.
 4. To run the app: `python game.py`
 5. To run the tests: `pytest`
 6. To run the coverage report: `coverage report`
+
 
 
