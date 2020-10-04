@@ -12,3 +12,11 @@ class BranchUpgradeNotAvailable(Exception):
 
     """
     pass
+
+
+class NotEnoughArmyBranches(Exception):
+    """
+    There's not enough branches
+
+    """
+    pass

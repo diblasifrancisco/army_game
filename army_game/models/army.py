@@ -7,4 +7,7 @@ class Army():
 
     @property
     def points(self):
-        return sum(branch.points for branch in self.army_branches)
+        return sum(branch.points for branch in self.army_branches if branch.status == 'ACTIVE')
+
+    def get_active_army_branches(self):
+        return [branch for branch in self.army_branches if branch.status == 'ACTIVE']
