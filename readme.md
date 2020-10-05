@@ -8,7 +8,7 @@ One army can attack another, the one that have more points wins.
 
 ## How it works
 
-The repo has an script `python game.py` that randomly takes 2 armies, once a couple or trainings and transformation, they fight,
+The repo has an script `python game.py` that randomly takes 2 armies, after running a couple or trainings and transformations, they fight,
 the one that have more points wins.
 
 ## Considerations
