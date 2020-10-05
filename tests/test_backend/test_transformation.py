@@ -1,7 +1,7 @@
 import pytest
 
 from army_game.backend.transformation import TransformationBackend
-from army_game.constants import TRASFORMATION_BRANCH_COST
+from army_game.constants import (TRAINING_FORCE_POINTS_COST, TRASFORMATION_BRANCH_COST)
 
 from army_game.exceptions import (
     BranchUpgradeNotAvailable,
@@ -31,3 +31,4 @@ class TestTransformationBackend:
         assert transformation.army_branch == archer_army_branch
 
         assert army_branch_transformed.branch_type == 'Pikeman'
+        assert army_branch_transformed.points == TRAINING_FORCE_POINTS_COST['Pikeman']['points']

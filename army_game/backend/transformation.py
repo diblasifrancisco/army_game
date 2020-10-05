@@ -3,6 +3,7 @@ from army_game.constants import (
     BRANCH_TO_LEVEL,
     LEVEL_TO_BRANCH,
     TRASFORMATION_BRANCH_COST,
+    TRAINING_FORCE_POINTS_COST,
 )
 from army_game.mixins.coin_transaction import CoinTransactionMixin
 
@@ -35,6 +36,8 @@ class TransformationBackend(CoinTransactionMixin):
             raise NotEnoughCoins("Army has not enought founds.")
 
         army_branch.branch_type = next_branch
+        army_branch.points = TRAINING_FORCE_POINTS_COST[next_branch]['points']
+
         transformation = Transformation(
             amount=next_level_cost,
             army_branch=army_branch,
