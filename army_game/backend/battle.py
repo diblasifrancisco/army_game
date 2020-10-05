@@ -13,22 +13,22 @@ class BattleBackend(CoinTransactionMixin):
         attacked_army_branches[0].remove()
 
     @classmethod
-    def _process_looser(cls, looser_branches):
-        looser_branches[0].remove()
-        looser_branches[1].remove()
+    def _process_loser(cls, loser_branches):
+        loser_branches[0].remove()
+        loser_branches[1].remove()
 
     @classmethod
     def fight(cls, attacking_army, attacked_army):
         """
         The winner army earns 100 coins
-        The looser army lost 2 army branches with the maximum points
+        The loser army lost 2 army branches with the maximum points
         If it's a tie, both armies lost a branch tha has most of the points.
 
         """
         winner = None
         is_a_tie = False
         amount = 100
-        looser_branches = None
+        loser_branches = None
 
         # armies should have at least 2 branches
         attacking_army_branches = sorted(attacking_army.get_active_army_branches(), key=lambda x: x.points)
@@ -44,11 +44,11 @@ class BattleBackend(CoinTransactionMixin):
 
         if attacking_army.points > attacked_army.points:
             winner = attacking_army
-            looser_branches = attacked_army_branches
+            loser_branches = attacked_army_branches
 
         elif attacking_army.points < attacked_army.points:
             winner = attacked_army
-            looser_branches = attacking_army_branches
+            loser_branches = attacking_army_branches
 
         else:
             is_a_tie = True
@@ -60,8 +60,8 @@ class BattleBackend(CoinTransactionMixin):
                 attacked_army_branches,
             )
         else:
-            BattleBackend._process_looser(
-                looser_branches,
+            BattleBackend._process_loser(
+                loser_branches,
             )
 
         battle = Battle(
