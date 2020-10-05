@@ -1,5 +1,5 @@
 from army_game.constants import TRAINING_FORCE_POINTS_COST
-from army_game.models.training import Training
+from army_game.models import Training
 from army_game.mixins.coin_transaction import CoinTransactionMixin
 
 from army_game.exceptions import NotEnoughCoins

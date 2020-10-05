@@ -1,4 +1,4 @@
-from army_game.models.transaction import Transaction
+from army_game.models import Transaction
 
 
 class Transformation(Transaction):

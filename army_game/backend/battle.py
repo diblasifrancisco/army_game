@@ -1,6 +1,6 @@
 from army_game.mixins.coin_transaction import CoinTransactionMixin
 
-from army_game.models.battle import Battle
+from army_game.models import Battle
 
 from army_game.exceptions import NotEnoughArmyBranches
 

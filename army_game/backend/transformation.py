@@ -1,4 +1,4 @@
-from army_game.models.transformation import Transformation
+from army_game.models import Transformation
 from army_game.constants import (
     BRANCH_TO_LEVEL,
     LEVEL_TO_BRANCH,
