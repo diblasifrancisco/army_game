@@ -67,7 +67,6 @@ class Game(object):
 
         # simulate training and transforamations
         for x in range(5):
-            # TODO update list of branches for each army on every transformation and training, also after a battle
             branch_selected_to_be_trained_army_one = random.randint(0, len(army_one.army_branches)-1)
             branch_selected_to_be_trained_army_two = random.randint(0, len(army_two.army_branches)-1)
 
