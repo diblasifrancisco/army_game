@@ -6,7 +6,19 @@ Army game: this game is about civilizations that can have multiple armies, at th
 be trained and transformed into another branch in order to have more points.
 One army can attack another, the one that have more points wins.
 
-## Steps
+## How it works
+
+The repo has an script `python game.py` that randomly takes 2 armies, once a couple or trainings and transformation, they fight,
+the one that have more points wins.
+
+## Considerations
+
+There are some decisions made that were not specified on the problem statement:
+
+- One army can attack another army only if they have at least 2 army branches
+- In case of a tie, both armies lost their branch with the highest score
+
+## Steps to run the game
 
 ### Using docker(recommended)
 

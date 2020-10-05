@@ -30,7 +30,7 @@ class BattleBackend(CoinTransactionMixin):
         amount = 100
         loser_branches = None
 
-        # armies should have at least 2 branches
+        # armies should have at least 2 branches to fight
         attacking_army_branches = sorted(attacking_army.get_active_army_branches(), key=lambda x: x.points)
         attacked_army_branches = sorted(attacked_army.get_active_army_branches(), key=lambda x: x.points)
 
@@ -71,6 +71,8 @@ class BattleBackend(CoinTransactionMixin):
             is_a_tie=is_a_tie,
             amount=amount,
         )
+        attacking_army.battles.append(battle)
+        attacked_army.battles.append(battle)
 
         if amount > 0:
             BattleBackend.process_coin_transaction(
