@@ -30,9 +30,9 @@ There are some decisions made that were not specified on the problem statement:
 ### Using a virtual enviroment
 
 1. Install pip https://pip.pypa.io/en/stable/installing/
-2. pip install virtualenv
-3. python3 -m venv env
-4. source env/bin/activate
+2. `pip install virtualenv`
+3. `python3 -m venv env`
+4. `source env/bin/activate`
 5. On the root project: `pip install -r requirements.txt`
 6. To run the app: `python game.py`
 7. To run the tests: `pytest`
