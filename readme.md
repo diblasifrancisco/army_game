@@ -2,17 +2,17 @@
 
 ## Summary
 
-Game about civilizations that can have multiple armies, at the same time these armies can have branches, that can
-be trained and transformed into another branch in order to earn more points.
-One army can attack another, the one that have more points wins.
+Game about civilizations that have multiple armies, at the same time these armies can have branches, that can
+be trained to earn points or transformed to be upgraded into another branch in order to earn points. Either a transformation or a training can be done by using the coins. Each army starts with 1000 coins.
+One army can attack another, the one that has more points wins 100 coins, on the other part, the loser, losts 2 army branches with the highest score. In case of a tie, both armies lost a branch with the highest score.
 
 ## Considerations
 
 There are some decisions made that were not strictly specified on the problem statement:
 
 - Since there is no UI to play the game, there is a script to simulate games randomly.
-- One army can attack another army only if they have at least 2 army branches
-- In case of a tie, both armies lost their branch with the highest score
+- One army can attack another army only if they have at least 2 army branches.
+- In case of a tie, both armies lost their branch with the highest score.
 - Since armies from the same civilization can fight, each army has its own budget(coins).
 
 ## How it works
