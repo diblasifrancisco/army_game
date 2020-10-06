@@ -2,8 +2,8 @@
 
 ## Summary
 
-Game about civilizations that have multiple armies, at the same time these armies can have branches, that can
-be trained to earn points or transformed to be upgraded into another branch in order to earn points. Either a transformation or a training can be done by using the coins. Each army starts with 1000 coins.
+Military game about civilizations that have multiple armies, at the same time these armies can have branches, that can
+be trained or transformed into another branch in order to earn points. Each army starts with 1000 coins. Either a transformation or a training can be done by using the coins.
 One army can attack another, the one that has more points wins 100 coins, on the other part, the loser, losts 2 army branches with the highest score. In case of a tie, both armies lost a branch with the highest score.
 
 ## Considerations
