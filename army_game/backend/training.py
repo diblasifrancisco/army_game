@@ -9,7 +9,7 @@ class TrainingBackend(CoinTransactionMixin):
     """
     It tries to train the branch if possible
     It returns the training created, the branch trained and
-    the transaction generated
+    the transaction generated.
 
     """
     @classmethod

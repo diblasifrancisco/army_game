@@ -9,6 +9,10 @@ class ArmyBranchBackend():
 
     @classmethod
     def create_branches_for_army(cls, army):
+        """
+        Creates all army branches depending on the quanty defined for each civilization
+
+        """
         army_branches = []
         civilization_name = army.civilization.name
         quantity_per_branch = CIVILIZATIONS[civilization_name]

@@ -12,7 +12,7 @@ DECREASE_BALANCE_TRANSACTIONS = [
 
 class CoinTransactionMixin():
     """
-    Mixin for all the events or transactions that have an impact on the coin balance
+    Mixin for all the events or transactions that have an impact on the coin balance.
 
     """
     @classmethod

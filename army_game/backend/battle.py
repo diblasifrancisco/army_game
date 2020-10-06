@@ -20,9 +20,9 @@ class BattleBackend(CoinTransactionMixin):
     @classmethod
     def fight(cls, attacking_army, attacked_army):
         """
-        The winner army earns 100 coins
-        The loser army lost 2 army branches with the maximum points
-        If it's a tie, both armies lost a branch tha has most of the points.
+        The army that has more points wins, and earns 100 coins.
+        The loser army lost 2 army branches with the highest score.
+        If it's a tie, both armies lost a branch with the highest score.
 
         """
         winner = None
@@ -30,10 +30,10 @@ class BattleBackend(CoinTransactionMixin):
         amount = 100
         loser_branches = None
 
-        # armies should have at least 2 branches to fight
         attacking_army_branches = sorted(attacking_army.get_active_army_branches(), key=lambda x: x.points)
         attacked_army_branches = sorted(attacked_army.get_active_army_branches(), key=lambda x: x.points)
 
+        # armies should have at least 2 branches to fight
         if (
             not attacking_army_branches or
             len(attacking_army_branches) <= 2 or

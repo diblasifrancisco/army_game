@@ -19,7 +19,8 @@ class TransformationBackend(CoinTransactionMixin):
     def transform_branch(cls, army_branch):
         """
         It tries to train the branch to the next level if possible
-        It returns the transformation created.
+        It returns the transformation created, the army and the transaction
+        generated.
 
         """
         current_number_level = BRANCH_TO_LEVEL[army_branch.branch_type]
